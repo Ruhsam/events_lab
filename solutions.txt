@@ -1,0 +1,60 @@
+Click Solution:
+<script>
+$(document).ready(function(){
+
+
+$("span").click( function buttonClick(event) {
+   var text = $(this).text();
+    $("ul").append("<li>" + text + "</li>");
+});
+
+});
+
+</script>
+
+
+Keypress solution:
+
+<script>
+$(document).ready(function(){
+
+  var startTime; // undefined at first
+  var endTime; // undefined
+  var total; // undefined
+
+  $(window).on("keypress", function handleKeypress(event) {
+
+    if (startTime) {
+      endTime = Date.now();
+      total = (endTime - startTime) / 1000;
+      $("#total-time").text(total + " seconds");
+    } else {
+      startTime = Date.now();
+    }
+
+  });
+
+});
+</script>
+
+Keypress solution:
+$(document).ready(function(){
+
+  var startTime; // undefined at first
+  var endTime; // undefined
+  var total; // undefined
+
+  $(window).on("keypress", function handleKeypress(event) {
+
+    if (startTime) {
+      endTime = Date.now();
+      total = (endTime - startTime) / 1000;
+      $("#total-time").text(total + " seconds");
+    } else {
+      startTime = Date.now();
+    }
+
+  });
+
+});
+</script>
